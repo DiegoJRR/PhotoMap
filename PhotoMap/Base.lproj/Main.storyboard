@@ -19,21 +19,27 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="prS-hU-BkV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFo-MB-dh1">
-                                <rect key="frame" x="136" y="525" width="103" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFo-MB-dh1">
+                                <rect key="frame" x="136" y="561" width="103" height="76"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" image="camera">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dm2-Pr-nej"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="HsG-gN-KHg" firstAttribute="bottom" secondItem="uFo-MB-dh1" secondAttribute="bottom" constant="30" id="7nD-Fr-PPX"/>
                             <constraint firstItem="prS-hU-BkV" firstAttribute="leading" secondItem="HsG-gN-KHg" secondAttribute="leading" id="JE0-4z-Pky"/>
                             <constraint firstItem="prS-hU-BkV" firstAttribute="top" secondItem="z1q-oo-t3L" secondAttribute="top" id="SRm-i4-pOD"/>
+                            <constraint firstItem="uFo-MB-dh1" firstAttribute="top" secondItem="HsG-gN-KHg" secondAttribute="top" constant="517" id="Taw-St-xDx"/>
                             <constraint firstItem="prS-hU-BkV" firstAttribute="bottom" secondItem="HsG-gN-KHg" secondAttribute="bottom" id="hZL-k9-fj9"/>
+                            <constraint firstItem="uFo-MB-dh1" firstAttribute="leading" secondItem="HsG-gN-KHg" secondAttribute="leading" constant="136" id="llg-SB-xCB"/>
                             <constraint firstItem="prS-hU-BkV" firstAttribute="trailing" secondItem="HsG-gN-KHg" secondAttribute="trailing" id="qg4-0F-H8x"/>
+                            <constraint firstItem="HsG-gN-KHg" firstAttribute="trailing" secondItem="uFo-MB-dh1" secondAttribute="trailing" constant="136" id="uJB-96-2ie"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HsG-gN-KHg"/>
                     </view>
